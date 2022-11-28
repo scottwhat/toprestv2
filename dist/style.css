@@ -1,0 +1,90 @@
+
+
+/* removes pre and post content auto gen borders
+make all have 0 padding and margin 
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+#content {
+    height: 100vh;
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+
+}
+
+.header-el {
+    grid-area: header;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    
+}
+
+.home-el {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.footer-el {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+.menu-el {
+    grid-area: main;
+   display: grid;
+   grid-template-columns: 25 25 25 25%;
+   grid-gap: 4rem;
+
+}
+
+.menu-item-holder {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.menu-item{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+}
+
+.btn-nav{
+    background-color: black;
+    color: white;
+    font-weight: 100;
+    border: none;
+    
+}
+.btn-nav:hover {
+        background-color:rgba(128, 128, 128, 0.833);
+        size: 125%;
+        transition: 0.7s;
+    
+}
+
+.button-nav.active {
+    border-bottom: 2px solid var(--font-color);
+  }
